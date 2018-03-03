@@ -28,9 +28,19 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader'
+          }
+        ]
       }
     ]
   },
+  watch: true,
+  performance: { hints: false },
   plugins: [
     new UglifyJsPlugin(),
     new HtmlWebpackPlugin()

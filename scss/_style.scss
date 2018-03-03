@@ -1,4 +1,17 @@
-$color: orange;
+$skew-color: #7A57D2;
+$background-color: #405DB9;
+
 body {
-    background: $color;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url('../src/images/moun.png');
+    background-position: bottom;
+    overflow-x: hidden;
 }
+
+img{
+    margin-top: 400px;
+}
+
