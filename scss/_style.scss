@@ -25,7 +25,13 @@ body {
     top:0;
     width: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, .1)
+    background-color: rgba(0, 0, 0, .1);
+    transition: .2 ease-in;
+}
+
+.opacity {
+    background-color: rgba(0, 0, 0, .8);
+    transition: .2 ease-in;
 }
 .header__container, .section__container, .footer__container {
     display: -webkit-box;
