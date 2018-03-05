@@ -25,7 +25,7 @@ body {
     z-index: 10;
     background-color: rgba(0, 0, 0, .1)
 }
-.header__container, .section__container {
+.header__container, .section__container, .footer__container {
     display: flex;
     max-width: 1250px;
     margin-left: auto;
@@ -154,6 +154,39 @@ body {
     color: #515152;
     font-size: 17px;
     letter-spacing: 3px;
+}
+
+// Footer
+.footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .1)
+}
+.footer__container {
+    justify-content: center;
+}
+.footer__list {
+    display: flex;
+    
+}
+.footer__list--item {
+    list-style-type: none;
+    margin-right: 25px;
+}
+
+.footer--link{
+    color: #FC0B56;
+    font-weight: 900;
+    font-size: 15px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    transition: .5 ease-in;
+
+    &:hover  {
+        color: #515152;
+    }
 }
 
 
