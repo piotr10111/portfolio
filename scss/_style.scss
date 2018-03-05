@@ -1,5 +1,6 @@
-$skew-color: #7A57D2;
-$background-color: #405DB9;
+$basic-text-color: #ffffff;
+$that-pink-color: #FC0B56;
+$extra-info-color: #515152;
 
 html{
     margin: 0;
@@ -39,7 +40,7 @@ body {
 .header--title {
     font-weight: 400;
     font-size: 36px;
-    color:#fff
+    color:$basic-text-color;
 }
 .header--title--style {
     font-weight: 900;
@@ -61,7 +62,7 @@ body {
     display: block;
     padding: 10px 15px;
     text-decoration: none;
-    color: #fff;
+    color: $basic-text-color;
     font-size: 18px;
     font-weight: 900;
     margin: 0 10px;
@@ -69,7 +70,6 @@ body {
     &::before {
         contain: '';
         -webkit-transition: all .5s;
-        -o-transition: all .5s;
         transition: all .5s;
     }
 
@@ -85,7 +85,7 @@ body {
         height: 1px;
         content: '.';
         color: transparent;
-        background: #fff;
+        background: $basic-text-color;
         visibility: none;
         opacity: 0;
         z-index: -1;
@@ -103,7 +103,7 @@ body {
     }
 }
 .nav--link--static {
-    background-color: #fff;
+    background-color: $basic-text-color;
     padding: 10px 15px;
     text-decoration: none;
     color: #000;
@@ -113,7 +113,7 @@ body {
     border-radius: 2px;
 
 }
-// Section about
+// Section About
 
 .section__about {
     background-image: url('../src/images/bck.jpg');
@@ -123,7 +123,7 @@ body {
 }
 
 .section__container {
-    color: #fff;
+    color: $basic-text-color;
     padding-top: 230px;
     display: block;
     
@@ -136,7 +136,7 @@ body {
     &::before
     {
         content: '<h1>';
-        color: #515152;
+        color: $extra-info-color;
         font-size: 13px;
         font-style: italic;
         position: absolute;
@@ -145,21 +145,37 @@ body {
     &::after
     {
         content: '</h1>';
-        color: #515152;
+        color: $extra-info-color;
         font-size: 13px;
         font-style: italic;
     }
 }
 
 .section__title--wow {
-    color: #FC0B56;
+    color: $that-pink-color;
 }
 
 .section__title--role {
     margin-top: -30px;
-    color: #515152;
+    color: $extra-info-color;
     font-size: 17px;
     letter-spacing: 3px;
+}
+
+
+// Section Offer
+
+.section__offer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px 0 20px;
+    height: 100vh;
+    background-color: #140038;
+    margin-top: 150px;
 }
 
 // Footer
@@ -168,7 +184,7 @@ body {
     bottom:0;
     width: 100%;
     z-index: 10;
-    background-color: rgba(0, 0, 0, .1)
+    // background-color: rgba(0, 0, 0, .1)
 }
 .footer__container {
     -webkit-box-pack: center;
@@ -187,17 +203,16 @@ body {
 }
 
 .footer--link{
-    color: #FC0B56;
+    color: $basic-text-color;
     font-weight: 900;
     font-size: 15px;
     text-decoration: none;
     letter-spacing: 3px;
     -webkit-transition: .5 ease-in;
-    -o-transition: .5 ease-in;
     transition: .5 ease-in;
 
     &:hover  {
-        color: #515152;
+        color: $extra-info-color;
     }
 }
 
