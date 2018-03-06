@@ -314,11 +314,38 @@ body {
     background: #200553;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-gradient(linear, left top, right top, from(#200553), to(#6a3093));
     background: linear-gradient(to right, #200553, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    .portfolio--list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            list-style-type: none;
+    }
+
+    .portfolio--item {
+        margin-right: 40px;
+        margin-top: 40px;
+    }
+
     p {
         text-align: center;
         font-size: 18px;
         margin-top: 50px;
     }
+}
+
+.item--figure{
+    margin: 0;
+    padding: 0;
 }
 
 .container--portfolio {
