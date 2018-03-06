@@ -15,9 +15,9 @@
     } );
 
     // Second section container -> width++
-    /*window.addEventListener( 'scroll', () => {
+    window.addEventListener( 'scroll', () => {
 
-        const section = document.querySelector( '.section__offer' );
+        const section = document.querySelector( '.section__about' );
         const offset = window.pageYOffset;
         const max_width = 1250;
         let x = section.offsetWidth;
@@ -32,7 +32,7 @@
         } 
         console.log(x);
 
-    } );*/
+    } );
       
     
 }())
