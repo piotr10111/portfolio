@@ -5,20 +5,17 @@
 
         const header = document.querySelector( '.header' ),
               positionY = window.pageYOffset || document.documentElement.scrollTop;
-
-        if( window.innerWidth > 1023 ) {    
-
-            if( positionY > 250 ) {
-                header.classList.add( 'opacity' );
-            } else {
-                header.classList.remove( 'opacity' );
-            }
+       
+        if( positionY > 250 ) {
+            header.classList.add( 'opacity' );
+        } else {
+            header.classList.remove( 'opacity' );
         }
-
+        
     } );
 
     // Second section container -> width++
-    window.addEventListener( 'scroll', () => {
+    /*window.addEventListener( 'scroll', () => {
 
         const section = document.querySelector( '.section__offer' );
         const offset = window.pageYOffset;
@@ -27,7 +24,7 @@
 
         if( offset > 100 ) {
             section.style.width = x + 'px';
-            x = x + 1;
+            x = x + 100;
         } else {return}
         
         if ( x >= 1250 ) {
@@ -35,7 +32,7 @@
         } 
         console.log(x);
 
-    } );
+    } );*/
       
     
 }())
