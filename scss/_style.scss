@@ -177,8 +177,8 @@ body {
     height: 100vh;
     margin-top: 100px;
     padding: 0 20px 0 20px;
-    width: 500px;
-    max-width: 1250px;
+    max-width: 500px;
+    
     margin-left: auto;
     margin-right: auto;
 }
@@ -334,6 +334,10 @@ body {
     .portfolio--item {
         margin-right: 40px;
         margin-top: 40px;
+
+        &:hover .portfolio--item--image {
+            transform: translateY(0px)
+        }
     }
 
     p {
@@ -346,12 +350,49 @@ body {
 .item--figure{
     margin: 0;
     padding: 0;
+  
 }
 
 .container--portfolio {
     margin-top: 80px;
 }
 
+// Section Contact
+.section__contact {
+     height: 100vh;
+     
+}
+
+.form-contact {
+    color: #000;
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.form-contact--body {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contact--label {
+    margin: 10px 0 15px 0;
+}
+
+.form-contact--email {
+    padding: 20px 0 0 0;
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:#5F2A89; 
+}
+
+.form-contact--textarea {
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:#5F2A89; 
+}
 // Footer
 .footer {
     position: fixed;
