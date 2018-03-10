@@ -22,16 +22,18 @@
         const max_width = 1250;
         let x = section.offsetWidth;
 
-        if( offset > 100 ) {
-            section.style.width = x + 'px';
-            x = x + 100;
-        } else {return}
+        if ( window.innerWidth >= 1440 ) {
         
-        if ( x >= 1250 ) {
-            section.style.width = max_width + 'px';
+            if( offset > 100 ) {
+                section.style.width = x + 'px';
+                x = x + 100;
+            } else {return}
+            
+            if ( x >= 1250 ) {
+                section.style.width = max_width + 'px';
+            } 
+            console.log(x);
         } 
-        console.log(x);
-
     } );
       
     
