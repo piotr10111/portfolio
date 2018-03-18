@@ -35,6 +35,10 @@
             console.log(x);
         } 
     } );
-      
     
+    // Hamburger menu
+    const button = document.querySelector( '.header__button' );
+    button.addEventListener( 'click', () => {
+        button.classList.toggle('header__button--close');
+    } );
 }())
