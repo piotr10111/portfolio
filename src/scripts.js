@@ -39,6 +39,9 @@
     // Hamburger menu
     const button = document.querySelector( '.header__button' );
     button.addEventListener( 'click', () => {
+
+        document.querySelector( '.nav__list' ).classList.toggle( 'nav__list--block' );
         button.classList.toggle('header__button--close');
+
     } );
 }())
