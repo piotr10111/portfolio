@@ -242,10 +242,11 @@ body {
     .nav__list .nav__list--item {
         display: block;
         margin-top: 60px;
+        margin-left: -23px;
         text-align: center;
 
         &:nth-child(1) {
-            margin-top: 300px;
+            margin-top: 180%;
         }
     }
 
@@ -290,6 +291,19 @@ body {
 @media (max-width: 900px) {
     .section__title {
         font-size: 65px;
+    }
+}
+
+@media (max-width: 620px) {
+    .section__title {
+        font-size: 50px;
+
+        &::before
+        {
+     
+            position: absolute;
+            top: 260px;
+        }
     }
 }
 
@@ -382,6 +396,7 @@ body {
     margin: 50px auto 0 auto;
     max-width: 600px;
     line-height: 30px;
+    color: red;
 }
 
 
@@ -391,6 +406,15 @@ body {
         width: 90vw;
         padding:0;
     }
+}
+
+
+
+@media (max-width: 600px) {
+    .section--text {
+        font-size: 16px;
+    }
+    
 }
 // Section Skills
 .section__skills {
@@ -448,9 +472,62 @@ body {
     .skills--item {
         margin-right: 40px;
         margin-top: 40px;
+        list-style-type: none;
+        width: 150px;
     }
 }
 
+@media ( max-width: 1040px ) {
+    .container--skills {
+        .skills--item {
+            width: 120px;
+        }
+    }
+
+}
+
+@media ( max-width: 560px ) {
+    .container--skills {
+        .skills--item {
+           margin-right: 20px;
+           width: 100px;
+        }
+    }
+
+}
+@media ( max-width: 440px ) {
+
+    .container--skills {
+        .skills--item {
+           margin-right: 15px;
+           width: 90px;
+        }
+    }
+
+}
+
+@media ( max-width: 340px ) {
+
+    .section__skills {
+        height: 120vh;
+        padding-bottom: 50px;
+    }
+    .container--skills {
+        .skills--item {
+           margin-right: 10px;
+           width: 80px;
+        }
+    }
+}
+@media ( max-width: 395px ) {
+
+    .container--skills {
+        .skills--item {
+           margin-right: 10px;
+           width: 80px;
+        }
+    }
+}
 // Section Portfolio
 .section__portfolio {
     height: 100vh;

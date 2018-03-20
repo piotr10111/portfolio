@@ -38,7 +38,10 @@
     
     // Hamburger menu
     const button = document.querySelector( '.header__button' );
-    button.addEventListener( 'click', () => {
+    button.addEventListener( 'click', ( event ) => {
+
+        (event ? event : event=window.event);
+        event.preventDefault();
 
         document.querySelector( '.nav__list' ).classList.toggle( 'nav__list--block' );
         button.classList.toggle('header__button--close');
