@@ -190,7 +190,8 @@ body {
 @media (max-width: 850px) {
     .header__nav {
         //margin-top: 100px;
-        margin-right: 0;
+        //margin-right: 0;
+        
     }
 
     .header__button {
@@ -205,7 +206,8 @@ body {
         transition: 300ms;
         margin-top: 0;
         height: 100vh;
-        width: 20vh;
+        width: 100vh;
+        
     }
     .nav__list--none {
         display: none;
@@ -213,7 +215,7 @@ body {
     .nav__list--block {
         display: block;
         transition: 300ms;
-
+        
         position: absolute;
         right: 0;
     }
@@ -221,7 +223,7 @@ body {
     .nav__list .nav__list--item .nav--link {
         padding: 0;
         color: #fff;
-        
+        font-size: 20px;
         &::after {
             background: transparent;
         }
@@ -236,17 +238,19 @@ body {
         font-weight: 900;
         margin: 0 10px;
         border-radius: 2px;
-    
+        font-size: 20px;
+
     }
 
     .nav__list .nav__list--item {
         display: block;
         margin-top: 60px;
-        margin-left: -23px;
         text-align: center;
-
+        max-width: 150px;
+        margin-left: auto;
+        margin-right: 27%;
         &:nth-child(1) {
-            margin-top: 180%;
+            margin-top: 30%;
         }
     }
 
