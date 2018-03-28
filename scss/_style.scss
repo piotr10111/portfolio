@@ -19,7 +19,6 @@ body {
     overflow-x: hidden;
  }
 
-
 .header {
     position: fixed;
     top:0;
@@ -209,10 +208,15 @@ body {
 
     .header__button {
         display: block;
+        
     }
 
     .nav__list--block{
         visibility: visible;
+        background-color: black;
+        margin: 0;
+        padding: 0 30px;
+        transition: .3s;
     }
     .nav__list .nav__list--item .nav--link {
         padding: 0;
@@ -543,7 +547,8 @@ body {
         margin-top: 40px;
 
         &:hover .portfolio--item--image {
-            transform: translateY(0px)
+            transform: translateY(0px);
+          
         }
     }
 
@@ -553,7 +558,10 @@ body {
         margin-top: 50px;
     }
 }
-
+.portfolio--item--image {
+    height: auto;
+    width: 100%;
+}
 .item--figure{
     margin: 0;
     padding: 0;
@@ -564,6 +572,11 @@ body {
     margin-top: 80px;
 }
 
+@media (max-width: 1160px) {
+    .portfolio--list {
+        flex-flow: nowrap;
+    }
+}
 // Section Contact
 .section__contact {
      height: 100vh;
