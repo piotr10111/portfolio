@@ -188,38 +188,32 @@ body {
 }
 
 @media (max-width: 850px) {
-    .header__nav {
-        //margin-top: 100px;
-        //margin-right: 0;
-        
+ 
+
+    .nav__list {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        visibility: hidden;
+    }
+
+    .nav__list .nav__list--item {
+        margin-top: 60px;
+        padding: 0;
+        text-align: center;
     }
 
     .header__button {
         display: block;
     }
 
-    .nav__list {
-        background: black;
-        //display: none;
-        position: absolute;
-        right: -3333px;
-        transition: 300ms;
-        margin-top: 0;
-        height: 100vh;
-        width: 100vh;
-        
+    .nav__list--block{
+        visibility: visible;
     }
-    .nav__list--none {
-        display: none;
-    }
-    .nav__list--block {
-        display: block;
-        transition: 300ms;
-        
-        position: absolute;
-        right: 0;
-    }
-
     .nav__list .nav__list--item .nav--link {
         padding: 0;
         color: #fff;
@@ -236,23 +230,12 @@ body {
     .nav--link--static {
         padding: 5px 10px;
         font-weight: 900;
-        margin: 0 10px;
+        //margin: 0 10px;
         border-radius: 2px;
         font-size: 20px;
 
     }
-
-    .nav__list .nav__list--item {
-        display: block;
-        margin-top: 60px;
-        text-align: center;
-        max-width: 150px;
-        margin-left: auto;
-        margin-right: 27%;
-        &:nth-child(1) {
-            margin-top: 30%;
-        }
-    }
+    
 
 }
 // Section Introduction

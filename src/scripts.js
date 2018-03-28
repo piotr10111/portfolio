@@ -43,8 +43,8 @@
         (event ? event : event=window.event);
         event.preventDefault();
 
-        document.querySelector( '.nav__list' ).classList.toggle( 'nav__list--block' );
         button.classList.toggle('header__button--close');
-
+        document.querySelector( '.nav__list' ).classList.toggle( 'nav__list--block' );
+       
     } );
 }())
