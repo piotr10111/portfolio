@@ -325,12 +325,21 @@ body {
     letter-spacing: 3px;
 }
 
-
+@media ( max-width: 520px ) {
+    .section__container .section__title--normal {
+        font-size: 50px;
+    }
+}
+@media ( max-width: 395px ) {
+    .section__container .section__title--normal {
+        font-size: 42px;
+    }
+}
 // Section About
 .section__about {
     //background-color: #140038;
     background-color: #200553;
-    height: 100vh;
+    //height: 100vh;
     margin-top: 100px;
     padding: 0 20px 0 20px;
     width: 500px;
@@ -338,7 +347,9 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
+.bottom-space {
+    padding-bottom: 60px;
+}
 .section__dots--white {
     width: 100%;
     display: -webkit-box;
@@ -403,7 +414,7 @@ body {
     margin: 50px auto 0 auto;
     max-width: 600px;
     line-height: 30px;
-    color: red;
+    color: $basic-text-color;
 }
 
 
@@ -425,7 +436,7 @@ body {
 }
 // Section Skills
 .section__skills {
-    height: 100vh;
+    //height: 100vh;
     //background: #200553;  /* fallback for old browsers */
 //background: -webkit-linear-gradient(to right, #200553, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
 //background: linear-gradient(to right, #200553, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -529,6 +540,7 @@ body {
 @media ( max-width: 395px ) {
 
     .container--skills {
+        margin-right: 30px;
         .skills--item {
            margin-right: 10px;
            width: 80px;
