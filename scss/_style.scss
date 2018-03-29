@@ -263,14 +263,14 @@ body {
 .section__intro {
     background-image: url('../src/images/bck.jpg');
     background-size: cover;
-    height: 80vh;
+    //height: 80vh;
     width: 100%;
 }
 
 .section__container {
     color: $basic-text-color;
     display: block;
-    padding: 230px 20px 0 20px;
+    padding: 230px 20px 150px 20px;
 }
 
 .section__title {
@@ -393,6 +393,7 @@ body {
 .section__image {
     text-align: center;
     margin-top: 50px;
+   //flex-direction: column;
     .section__image--avatar {
         border-radius: 50%;
     }
@@ -433,6 +434,14 @@ body {
         font-size: 16px;
     }
     
+}
+
+@media (max-width: 390px) {
+    .section__image {
+        .section__image--avatar {
+            width: 100%;
+        }
+     }
 }
 // Section Skills
 .section__skills {
