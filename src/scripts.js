@@ -53,7 +53,7 @@
         
         const skills = document.querySelectorAll( '.skills--item' );
         const images = document.querySelectorAll( '.portfolio--item' );
-
+        if( window.innerWidth > 850 ) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
 
@@ -63,8 +63,7 @@
          
             });
         });
-
-        if( window.innerWidth > 850 ) {
+     
 
             skills.forEach(image => {
                 observer.observe(image);
