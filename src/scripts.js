@@ -64,16 +64,22 @@
             });
         });
 
-        skills.forEach(image => {
-            observer.observe(image);
-        })
-       
-        images.forEach(image => {
-            observer.observe(image);
-        })
+        if( window.innerWidth > 850 ) {
 
-        // Smooth Scroll
-     
+            skills.forEach(image => {
+                observer.observe(image);
+            })
+           
+            images.forEach(image => {
+                observer.observe(image);
+            })
+
+        }
+ 
+
+        // Menu hide
+
+        
         
 }())
 
