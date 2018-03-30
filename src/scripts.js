@@ -47,4 +47,23 @@
         document.querySelector( '.nav__list' ).classList.toggle( 'nav__list--block' );
        
     } );
+
+    // Detect when an element is in the viewport
+    const isInViewport = function ( element ) {
+        let bounce = element.getBoundingClientRect();
+        return (
+            bounce.top >= 0 &&
+            bounce.left >= 0 &&
+            bounce.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            bounce.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+    
+    const element  = document.querySelector( '.section__about' );
+    
+    if ( isInViewport( element ) ) {
+        console.log( 'In the viewport!' );
+    }
+
+
 }())
