@@ -50,51 +50,31 @@
         });
 
         // Detect when an element is in the viewport
-        /*const isInViewport = function ( elem ) {
-            const bounce = elem.getBoundingClientRect();
-            return (
-                bounce.top >= 0 &&
-                bounce.left >= 0 &&
-                bounce.bottom <= ( window.innerHeight || document.documentElement.clientHeight ) &&
-                bounce.right <= ( window.innerWidth || document.documentElement.clientWidth )
-            );
-        };
-    
-        const item = document.querySelector( '.left' );
-        const items = Array.from( document.querySelectorAll( '.left' ) );
-        items.forEach = function() {
-
-            if ( isInViewport( items ) ) {
-                items.classList.add( 'fadeInLeft' )
-    
-            } 
-
-        }*/
-        const images_left = document.querySelectorAll('.left');
-        const images_right = document.querySelectorAll('.right');
+        
+        const skills = document.querySelectorAll( '.skills--item' );
+        const images = document.querySelectorAll( '.portfolio--item' );
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
 
-                if (entry.intersectionRatio > 0 && entry.className == "left") {
-                    entry.target.classList.add('fadeInLeft');
+                if (entry.intersectionRatio > 0 ) {
+                    entry.target.classList.add('fadeInDown');
                 }
-
-                /*if (entry.intersectionRatio > 0 && entry.className == "right") {
-                    entry.target.classList.add('fadeInRight');
-                }*/
-
+         
             });
         });
 
-        images_left.forEach(image => {
+        skills.forEach(image => {
             observer.observe(image);
         })
-        images_right.forEach(image => {
+       
+        images.forEach(image => {
             observer.observe(image);
         })
 
-
+        // Smooth Scroll
+     
+        
 }())
 
 
