@@ -198,9 +198,15 @@ body {
 
 }
 
+
 @media (max-width: 850px) {
  
-
+    .none {
+        display: none;
+    }
+    .block {
+        display: block;
+    }
     .nav__list {
         position: fixed;
         right: 0;

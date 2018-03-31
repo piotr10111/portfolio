@@ -74,7 +74,22 @@
         }
  
 
-        // Menu hide
+        // Menu hide after link clicked
+        if (window.innerWidth <= 850) {
+            function hide() {
+               const ul =  document.querySelector( '.nav__list' );
+               ul.classList.toggle('nav__list--block');
+
+               const button = document.querySelector( '.header__button' );
+               button.classList.toggle( 'header__button--close' );
+
+            }
+            const links = Array.from(document.querySelectorAll( '.clicked' ));
+            links.forEach( link => link.addEventListener('click', hide ));
+        }
+        
+
+        // Smooth Scroll
         new ScrollMenu('.scroll', {
             duration: 900,
             //activeOffset: 100,
