@@ -64,6 +64,7 @@ body {
 }
 
 
+
 .header__button {
     z-index: 111;
     -webkit-box-sizing: border-box;
@@ -514,49 +515,7 @@ body {
 
 }
 
-@media ( max-width: 560px ) {
-    .container--skills {
-        .skills--item {
-           margin-right: 20px;
-           width: 100px;
-        }
-    }
 
-}
-@media ( max-width: 440px ) {
-
-    .container--skills {
-        .skills--item {
-           margin-right: 15px;
-           width: 90px;
-        }
-    }
-
-}
-
-@media ( max-width: 340px ) {
-
-    .section__skills {
-        height: 120vh;
-        padding-bottom: 50px;
-    }
-    .container--skills {
-        .skills--item {
-           margin-right: 10px;
-           width: 80px;
-        }
-    }
-}
-@media ( max-width: 395px ) {
-
-    .container--skills {
-        margin-right: 30px;
-        .skills--item {
-           margin-right: 10px;
-           width: 80px;
-        }
-    }
-}
 // Section Portfolio
 .section__portfolio {
     //height: 100vh;

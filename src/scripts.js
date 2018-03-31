@@ -38,17 +38,15 @@
         });
 
         // Hamburger menu
-        const button = document.querySelector('.header__button');
+        const button = document.querySelector( '.header__button' );
         button.addEventListener('click', (event) => {
 
             (event ? event : event = window.event);
             event.preventDefault();
-
-            button.classList.toggle('header__button--close');
-            document.querySelector('.nav__list').classList.toggle('nav__list--block');
-
+            button.classList.toggle( 'header__button--close' );
+            document.querySelector( '.nav__list' ).classList.toggle( 'nav__list--block' );
         });
-
+     
         // Detect when an element is in the viewport
         
         const skills = document.querySelectorAll( '.skills--item' );
@@ -77,8 +75,12 @@
  
 
         // Menu hide
-
-        
+        new ScrollMenu('.scroll', {
+            duration: 900,
+            //activeOffset: 100,
+            scrollOffset:0
+        })
+           
         
 }())
 
