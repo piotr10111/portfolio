@@ -74,7 +74,7 @@ body {
             box-sizing: border-box;
     display: none;
     width: 40px;
-  height: 35px;
+  height: 30px;
   border: 0;
   border-top: 3px solid #ffffff;
   background: transparent;
@@ -122,6 +122,7 @@ body {
     top: 43px;
     right: 0;
     margin-right: 17px;
+    padding: 0;
     &::before,
     &::after {
         content: '';
@@ -186,17 +187,6 @@ body {
     }
 }
 
-.nav--link--static {
-    background-color: $basic-text-color;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    font-weight: 900;
-    margin: 0 10px;
-    border-radius: 2px;
-
-}
 
 
 @media (max-width: 850px) {
@@ -386,17 +376,16 @@ body {
     {
         content: '<h2>';
         color: $extra-info-color;
-        font-size: 13px;
+        font-size: 11px;
         font-style: italic;
         position: absolute;
         top: -10px;
-        
     }
     &::after
     {
         content: '</h2>';
         color: $extra-info-color;
-        font-size: 13px;
+        font-size: 11px;
         font-style: italic;
         }
 }
@@ -523,6 +512,14 @@ body {
     }
 
 }
+@media ( max-width: 600px ) {
+    .container--skills {
+        .skills--item {
+            width: 100px;
+        }
+    }
+
+}
 
 
 // Section Portfolio
@@ -582,7 +579,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-  
+    overflow: hidden;
 }
 
 figure.item--figure figcaption::before {
@@ -610,7 +607,8 @@ figure.item--figure h2 {
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
 	-webkit-transform: translate3d(0,-50%,0);
-	transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+    letter-spacing: 2px;
 }
 
 figure.item--figure figcaption::before,
@@ -635,6 +633,14 @@ figure.item--figure .figcaption--link {
     cursor: pointer;
     color: #FC0B56;
     font-weight: 600;
+    letter-spacing: 2px;
+
+}
+figure.item--figure .fa-eye {
+    display: block;
+    margin-left: 5px;
+    margin-top: -2px;
+    font-size: 30px;
 }
 
 figure.item--figure:hover h2 {
