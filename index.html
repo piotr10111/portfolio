@@ -10,6 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="pmnet.pl">
     <title>Piotr Michalski - Programista</title>
+    <link rel="icon" href="src/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
@@ -21,7 +22,7 @@
 <body>
 
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/Organization">
+    <header id="header" class="header" role="banner" itemscope itemtype="http://schema.org/Organization">
         <div class="header__container">
             <h1 class="header--title" rel="index">
                 <a href="#" class="title--link" title="Strona główna" itemprop="url">
@@ -29,7 +30,7 @@
                 </a>
             </h1>
             <button class="header__button" role="button" type="button" name="menu">Menu</button>
-            <nav class="header__nav" itemscope itemtype="https://schema.org/WebPage">
+            <nav class="header__nav" role="menu" itemscope itemtype="https://schema.org/WebPage">
                 <ul class="nav__list" itemprop="breadcrumb">
                     <li class="nav__list--item">
                         <a data-scroll href="#intro" class="nav--link clicked scroll">Start</a>
@@ -213,9 +214,8 @@
                                     Super projekt
                                 </h2>
                                 <a href="https://github.com/piotr10111" class="figcaption--link" target="_blank">
-                                    Sprawdź
+                                    Sprawdź<span class="fas fa-eye"></span>
                                 </a>
-                                <span class="fas fa-eye"></span>
                             </figcaption>
                     </figure>
                        </li>
@@ -240,7 +240,7 @@
     
     </main>
 
-    <footer class="footer" id="footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <footer class="footer" id="footer" role="contentinfo" itemprop="author" itemscope itemtype="https://schema.org/Person">
 
         <div class="footer__container">
             
@@ -248,7 +248,7 @@
 
             <address>
             <nav class="footer__nav">
-                <ul class="footer__list"  itemscope itemtype="http://schema.org/Organization">
+                <ul class="footer__list" itemscope itemtype="http://schema.org/Organization">
                     <li class="footer__list--item">
                         <a href="#" class="footer--link" itemprop="sameAs">
                             <span class="fab fa-linkedin"></span>
