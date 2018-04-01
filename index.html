@@ -21,16 +21,16 @@
 <body>
 
 
-    <header class="header">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/Organization">
         <div class="header__container">
-            <h1 class="header--title">
-                <a href="#" class="title--link">
+            <h1 class="header--title" rel="index">
+                <a href="#" class="title--link" title="Strona główna" itemprop="url">
                     <span   class="header--title--style">pm</span>net
                 </a>
             </h1>
-            <button class="header__button" type="button" name="menu">Menu</button>
-            <nav class="header__nav">
-                <ul class="nav__list">
+            <button class="header__button" role="button" type="button" name="menu">Menu</button>
+            <nav class="header__nav" itemscope itemtype="https://schema.org/WebPage">
+                <ul class="nav__list" itemprop="breadcrumb">
                     <li class="nav__list--item">
                         <a data-scroll href="#intro" class="nav--link clicked scroll">Start</a>
                     </li>
@@ -48,32 +48,34 @@
         </div>
     </header>
 
-    <main>
+    <main id="main" class="content" role="main">
 
         <section class="section section__intro animated fadeIn" id="intro">
 
             <div class="section__container">
-                <h2 class="section__title">
-                    Cześć,
-                    <br> jestem
-                    <span class="section__title--wow">P</span>iotr,
-                    <br> web developer.
-                </h2>
-                <h3 class="section__title--role">Front End Developer / Student </h3>
+                <header>
+                    <h2 class="section__title">
+                        Cześć,
+                        <br> jestem
+                        <span class="section__title--wow">P</span>iotr,
+                        <br> web developer.
+                    </h2>
+                    <h3 class="section__title--role">Front End Developer / Student </h3>
+                </header>
             </div>
 
         </section>
 
-        <section class="section section__about" >
+        <section class="section section__about" itemscope itemtype="https://schema.org/WebSite">
 
             <div class="section__container bottom-space">
-                <h2 class="section__title--normal">O mnie</h2>
+                <header><h2 class="section__title--normal">O mnie</h2></header>
                 <span class="section__dots--white"></span>
                 <figure class="section__image">
-                    <img src="src/images/awatar.png" alt="Zdjęcie profilowe" class="section__image--avatar">
-                    <figcaption class="section__image--caption">Tak to ja</figcaption>
+                    <img itemprop="image" src="src/images/awatar.png" alt="Zdjęcie profilowe" class="section__image--avatar">
+                    <figcaption itemprop="name" class="section__image--caption"><i>Piotr Michalski</i></figcaption>
                 </figure>
-                <p class="section--text">
+                <p class="section--text" itemprop="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus autem minima facere quibusdam rerum optio odit
                     quas eos consequuntur consequatur placeat a, tenetur hic est pariatur aut, modi earum? Lorem ipsum dolor
                     sit amet consectetur adipisicing elit. Beatae voluptatibus autem minima facere quibusdam rerum optio
@@ -86,7 +88,7 @@
         <section class="section section__skills" id="skills">
 
             <div class="section__container">
-                <h2 class="section__title--normal black">Umiejętności</h2>
+               <header> <h2 class="section__title--normal black">Umiejętności</h2></header>
                 <span class="section__dots--black"></span>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat voluptas dolorem consequatur provident
                     assumenda voluptate voluptatum alias animi harum minima labore, quas sapiente dolore suscipit, perspiciatis
@@ -143,7 +145,7 @@
         <section class="section section__portfolio" id="portfolio">
 
             <div class="section__container">
-                <h2 class="section__title--normal">Portfolio</h2>
+                <header><h2 class="section__title--normal">Portfolio</h2></header>
                 <span class="section__dots--white"></span>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat voluptas dolorem consequatur provident
                     assumenda voluptate voluptatum alias animi harum minima labore, quas sapiente dolore suscipit, perspiciatis
@@ -238,32 +240,33 @@
     
     </main>
 
-    <footer class="footer" id="footer">
+    <footer class="footer" id="footer" itemprop="author" itemscope itemtype="https://schema.org/Person">
 
         <div class="footer__container">
             
-            <a href="mailto:piotr.michalski2000@gmail.com" class="footer--mail">Napisz do mnie: piotr.michalski2000@gmail.com</a>
+            <a href="mailto:piotr.michalski2000@gmail.com" class="footer--mail" itemprop="email" >Napisz do mnie: piotr.michalski2000@gmail.com</a>
 
+            <address>
             <nav class="footer__nav">
-                <ul class="footer__list">
+                <ul class="footer__list"  itemscope itemtype="http://schema.org/Organization">
                     <li class="footer__list--item">
-                        <a href="#" class="footer--link">
+                        <a href="#" class="footer--link" itemprop="sameAs">
                             <span class="fab fa-linkedin"></span>
                         </a>
                     </li>
                     <li class="footer__list--item">
-                        <a href="#" class="footer--link">
+                        <a href="#" class="footer--link" itemprop="sameAs">
                             <span class="fab fa-facebook-square"></span>
                         </a>
                     </li>
                     <li class="footer__list--item">
-                        <a href="#" class="footer--link">
+                        <a href="#" class="footer--link" itemprop="sameAs">
                             <span class="fab fa-github-square"></span>
                         </a>
                     </li>
                 </ul>
             </nav>
-                        
+        </address>        
         </div>
 
     </footer>
