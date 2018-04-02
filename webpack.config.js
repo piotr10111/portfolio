@@ -23,11 +23,13 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [ 'style-loader', 'css-loader' ], options: {minimize: true}
       },
       {
         test: /\.scss$/,
-        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        use: [ 
+          'style-loader', 'css-loader', 'sass-loader' 
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
