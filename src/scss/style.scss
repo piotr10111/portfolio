@@ -305,12 +305,14 @@ body {
 .section__title {
     font-size: 73px;
     font-weight: 900;
-
+    &::before,
+    &::after{    font-family: 'Hi Melody', cursive;
+    }
     &::before
     {
         content: '<h1>';
         color: $extra-info-color;
-        font-size: 13px;
+        font-size: 15px;
         font-style: italic;
         position: absolute;
         top: 280px;
@@ -319,7 +321,7 @@ body {
     {
         content: '</h1>';
         color: $extra-info-color;
-        font-size: 13px;
+        font-size: 15px;
         font-style: italic;
     }
 }
@@ -400,12 +402,14 @@ body {
     text-align: center;
     margin-top: -100px;
     position: relative;
-    font-weight: 400;
+    &::before,
+    &::after{    font-family: 'Hi Melody', cursive;
+    }
     &::before
     {
         content: '<h2>';
         color: $extra-info-color;
-        font-size: 11px;
+        font-size: 15px;
         font-style: italic;
         position: absolute;
         top: -10px;
@@ -414,7 +418,7 @@ body {
     {
         content: '</h2>';
         color: $extra-info-color;
-        font-size: 11px;
+        font-size: 15px;
         font-style: italic;
         }
 }
