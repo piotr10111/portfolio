@@ -3,6 +3,8 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 
 gulp.task( 'sass', function() {
@@ -24,8 +26,26 @@ gulp.task( 'sass', function() {
 
 } )
 
-gulp.task('sass:watch', function () {
+gulp.task('watch', function () {
   gulp.watch('./src/scss/*.scss', ['sass']);
+  gulp.watch('src/js/scripts.js', ['uglify']);
 });
 
-gulp.task('default',['sass', 'sass:watch']);
+gulp.task('babel', () =>
+    gulp.src('src/js/scripts.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(gulp.dest('./src/js'))
+);
+
+gulp.task( 'uglify', function() {
+  gulp.src( 'src/js/scripts.js' )
+  .pipe(uglify().on('error', function(e){
+    console.log(e);
+ }))
+  .pipe( gulp.dest( 'src/js/min' ) )
+} );
+
+
+gulp.task('default',['sass', 'watch', 'uglify', 'babel']);
