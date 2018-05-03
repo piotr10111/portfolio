@@ -48,4 +48,4 @@ gulp.task( 'uglify', function() {
 } );
 
 
-gulp.task('default',['sass', 'watch', 'uglify', 'babel']);
+gulp.task( 'default',[ 'sass', 'watch', 'uglify', 'babel' ] );
