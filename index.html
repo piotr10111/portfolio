@@ -29,9 +29,9 @@
                     <span   class="header--title--style">pm</span>net
                 </a>
             </h1>
-            <a class="header__button" role="button" type="button" name="menu">Menu</a>
+            <a class="header__button" aria-label="menu" aria-expanded="false" aria-controls="main-menu" tabindex="1" role="button" type="button" name="menu">Menu</a>
             <nav class="header__nav" role="menu" itemscope itemtype="https://schema.org/WebPage">
-                <ul class="nav__list" itemprop="breadcrumb">
+                <ul id="main-menu" class="nav__list" itemprop="breadcrumb">
                     <li class="nav__list--item">
                         <a data-scroll href="#intro" class="nav--link clicked scroll" aria-label="Strona główna">Start</a>
                     </li>
@@ -77,10 +77,8 @@
                     <figcaption itemprop="name" class="section__image--caption"><i>Piotr Michalski</i></figcaption>
                 </figure>
                 <p class="section--text" itemprop="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus autem minima facere quibusdam rerum optio odit
-                    quas eos consequuntur consequatur placeat a, tenetur hic est pariatur aut, modi earum? Lorem ipsum dolor
-                    sit amet consectetur adipisicing elit. Beatae voluptatibus autem minima facere quibusdam rerum optio
-                    odit quas eos consequuntur consequatur placeat a, tenetur hic est pariatur aut, modi earum?
+                    Cześć jestem Piotr i mam 17 lat. Chodzę do 2 klasy technikum o profilu informatycznym. Dwa lata temu znalazłem zajawkę do programowania. Naukę zacząłem kolejno od C, C++, Pythona i baz danych MySql. Ostatecznie odnalazłem się we front-endzie, pewnie dlatego, że jestem osobą bardzo kreatywną, co jest niezwykle istotne w tworzeniu ciekawych stron internetowych.
+                    Większość mojej nauki pochodzi z wiedzy praktycznej, a także z dokumentacji znalezionych w internecie.
                 </p>
             </div>
 
@@ -91,9 +89,8 @@
             <div class="section__container">
                <header> <h2 class="section__title--normal black">Umiejętności</h2></header>
                 <span class="section__dots--black"></span>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat voluptas dolorem consequatur provident
-                    assumenda voluptate voluptatum alias animi harum minima labore, quas sapiente dolore suscipit, perspiciatis
-                    placeat recusandae tempore.</p>
+                <p> 
+                    Są to narzędzia i technologie, z pomocą których tworze projekty, jednocześnie poszerzająć umiejętności w ich korzystaniu. </p>
                 <div class="container--skills">
                         <ul class="skills--list">
                                 <li class="skills--item left animated ">
@@ -148,9 +145,7 @@
             <div class="section__container">
                 <header><h2 class="section__title--normal">Portfolio</h2></header>
                 <span class="section__dots--white"></span>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat voluptas dolorem consequatur provident
-                    assumenda voluptate voluptatum alias animi harum minima labore, quas sapiente dolore suscipit, perspiciatis
-                    placeat recusandae tempore.</p>
+                <p>Poniżej znajdują się projekty którymi, chętnie się podzielę. Włożyłem w nie bardzo dużo pracy i wysiłku. Z każdym stworzonym projektem uczę się więcej oraz poznaje nowe rozwiązania co do ich tworzenia.</p>
 
                 <div class="container--portfolio">
                     <ul class="portfolio--list">
@@ -255,12 +250,7 @@
                         </a>
                     </li>
                     <li class="footer__list--item">
-                        <a href="#" class="footer--link" itemprop="sameAs">
-                            <span class="fab fa-facebook-square"></span>
-                        </a>
-                    </li>
-                    <li class="footer__list--item">
-                        <a href="#" class="footer--link" itemprop="sameAs">
+                        <a href="https://github.com/piotr10111" class="footer--link" itemprop="sameAs">
                             <span class="fab fa-github-square"></span>
                         </a>
                     </li>
