@@ -1,0 +1,147 @@
+.section__portfolio {
+    //height: 100vh;
+    background: #200553;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#200553), to(#6a3093));
+    background: linear-gradient(to right, #200553, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-bottom: 0;
+    .portfolio--list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            list-style-type: none;
+            margin-bottom: 0;
+            padding-bottom: 80px;
+
+    }
+
+    .portfolio--item {
+        margin-right: 40px;
+        margin-top: 40px;
+
+        &:hover .portfolio--item--image {
+            -webkit-transform: translateY(0px);
+                    transform: translateY(0px);
+          
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 50px;
+    }
+}
+
+.section__dots--white{
+    margin-left: -10px;
+}
+.portfolio--item--image{
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+}
+
+.item--figure{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+figure.item--figure figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	//background: -webkit-linear-gradient(top, rgba(97, 72, 86, 0) 0%, rgba(72,76,97,0.8) 75%);
+    //background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    background: linear-gradient(to bottom, rgba(116, 51, 110, 0) 0%, rgba(72,76,97,0.8) 75%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,50%,0);
+	transform: translate3d(0,50%,0);
+}
+figure.item--figure h2 {
+	position: absolute;
+	top: 40%;
+    //left: 30%;
+    display: flex;
+    justify-content: center;
+	width: 100%;
+    color: white;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+    transform: translate3d(0,-50%,0);
+    letter-spacing: 2px;
+}
+
+figure.item--figure figcaption::before,
+figure.item--figure .figcaption--link {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.item--figure .figcaption--link {
+	position: absolute;
+	bottom: 0;
+    //left: 27%;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0 2em 0;
+    width: 100%;
+	opacity: 0;
+	-webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
+    font-size: 19px;
+    text-decoration-line: underline;
+    cursor: pointer;
+    color: #FC0B56;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+figure.item--figure .fa-eye {
+    display: block;
+    margin-left: 5px;
+    margin-top: -2px;
+    font-size: 30px;
+}
+
+figure.item--figure:hover h2 {
+	color: #fff;
+	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+figure.item--figure:hover figcaption::before ,
+figure.item--figure:hover .figcaption--link {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.container--portfolio {
+    margin-top: 80px;
+}
+
+@media ( max-width: 800px ) {
+    .portfolio--item {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio--item--image{
+       height: 250px;    
+       background-size: cover;
+    }
+}
