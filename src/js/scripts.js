@@ -37,14 +37,14 @@
             }
         }
     });
- 
+
     // Hamburger menu
-    const button = document.querySelector( '.header__button' );
-    button.addEventListener( 'click', function(event) {
+    var button = document.querySelector('.header__button');
+    button.addEventListener('click', function (event) {
         event ? event : event = window.event;
         event.preventDefault();
-        button.classList.toggle( '.header__button--close' );
-    } )
+        button.classList.toggle('.header__button--close');
+    });
 
     // Detect when an element is in the viewport
 

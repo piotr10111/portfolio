@@ -1,0 +1,27 @@
+$basic-text-color: #ffffff;
+$that-pink-color: #FC0B56;
+$extra-info-color: #515152;
+
+html{
+    margin: 0;
+	padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+ }
+
+ @import 'header';
+ @import 'intro';
+ @import 'about';
+ @import 'skills';
+ @import 'portfolio';
+ @import 'footer';

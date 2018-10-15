@@ -9,7 +9,7 @@ const babel = require('gulp-babel');
 
 gulp.task( 'sass', function() {
 
-  gulp.src( './src/scss/*.scss' )
+  gulp.src( './src/scss/main.scss' )
   .pipe( sourcemaps.init() )
   .pipe( sass({
     errorLogToConsole: true,

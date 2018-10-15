@@ -1,0 +1,77 @@
+.section__intro {
+    background-image: url('../images/bck.jpg');
+    background-size: cover;
+    //height: 80vh;
+    width: 100%;
+}
+
+.section__container {
+    color: $basic-text-color;
+    display: block;
+    padding: 230px 20px 150px 20px;
+}
+
+.section__title {
+    font-size: 73px;
+    font-weight: 900;
+    &::before,
+    &::after{    font-family: 'Hi Melody', cursive;
+    }
+    &::before
+    {
+        content: '<h1>';
+        color: $extra-info-color;
+        font-size: 15px;
+        font-style: italic;
+        position: absolute;
+        top: 280px;
+    }
+    &::after
+    {
+        content: '</h1>';
+        color: $extra-info-color;
+        font-size: 15px;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 900px) {
+    .section__title {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 620px) {
+    .section__title {
+        font-size: 50px;
+
+        &::before
+        {
+     
+            position: absolute;
+            top: 260px;
+        }
+    }
+}
+
+.section__title--wow {
+    color: $that-pink-color;
+}
+
+.section__title--role {
+    margin-top: -30px;
+    color: $extra-info-color;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+@media ( max-width: 520px ) {
+    .section__container .section__title--normal {
+        font-size: 50px;
+    }
+}
+@media ( max-width: 395px ) {
+    .section__container .section__title--normal {
+        font-size: 42px;
+    }
+}
