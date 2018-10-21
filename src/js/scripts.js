@@ -43,7 +43,7 @@
     button.addEventListener('click', function (event) {
         event ? event : event = window.event;
         event.preventDefault();
-        button.classList.toggle('.header__button--close');
+        button.classList.toggle('header__button--close');
     });
 
     // Detect when an element is in the viewport
