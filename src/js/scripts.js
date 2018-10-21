@@ -40,10 +40,13 @@
 
     // Hamburger menu
     var button = document.querySelector('.header__button');
+    var ul = document.querySelector('.nav__list');
+            
     button.addEventListener('click', function (event) {
         event ? event : event = window.event;
         event.preventDefault();
         button.classList.toggle('header__button--close');
+        ul.classList.toggle('nav__list--block');
     });
 
     // Detect when an element is in the viewport
