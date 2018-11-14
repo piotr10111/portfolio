@@ -1,11 +1,13 @@
-var gulp = require('gulp');
-var rename = require('gulp-rename');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
-const babel = require('gulp-babel');
+const gulp = require('gulp');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const terser = require('gulp-terser');
+var pump = require('pump');
 
+sass.compiler = require('node-sass');
 
 gulp.task( 'sass', function() {
 
@@ -31,21 +33,21 @@ gulp.task('watch', function () {
   gulp.watch('src/js/scripts.js', ['uglify']);
 });
 
-gulp.task('babel', () =>
-    gulp.src('src/js/scripts.js')
-        .pipe(babel({
-            presets: ['env']
-        }))
-        .pipe(gulp.dest('./src/js'))
-);
+gulp.task('js', function(){
+  return gulp.src('src/js/scripts.js') 
+  .pipe(uglify())
+  .pipe(concat('main.js'))
+  .pipe(gulp.dest('src/js/min/scripts.js'));
+});
 
-gulp.task( 'uglify', function() {
-  gulp.src( 'src/js/scripts.js' )
-  .pipe(uglify().on('error', function(e){
-    console.log(e);
- }))
-  .pipe( gulp.dest( 'src/js/min' ) )
-} );
+gulp.task('script', function (cb) {
+  pump([
+    gulp.src('src/js/scripts.js'),
+    terser(),
+    concat('bundle.js'),
+    gulp.dest('src/js/min/scripts.js')
+  ], cb);
+});
 
 
-gulp.task( 'default',[ 'sass', 'watch', 'uglify', 'babel' ] );
+gulp.task( 'default',[ 'sass', 'watch', 'script' ] );
