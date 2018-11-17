@@ -45,7 +45,7 @@ gulp.task('script', function (cb) {
     gulp.src('src/js/scripts.js'),
     terser(),
     concat('bundle.js'),
-    gulp.dest('src/js/min/scripts.js')
+    gulp.dest('src/js/min')
   ], cb);
 });
 
